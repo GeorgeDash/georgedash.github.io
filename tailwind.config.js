@@ -14,7 +14,7 @@ module.exports = {
         md: ['1.063rem', '1.5rem']
       },
       fontFamily: {
-        "sans": "'Inter'",
+        "sans": "'Onest'",
       },
       width: {
         "40-p": "40%",
