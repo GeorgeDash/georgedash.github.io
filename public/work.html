@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="/build/css/style.css">
+        <title>Work</title>
+    </head>
+    <body>
+        <nav class="topbar">
+            <img src="/build/img/profile.png" alt="profile pic" class="cursor-pointer hover:animate-spin">
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">    
+            <label for="menu-toggle" class="hamburger">&#9776;</label>
+            <div class="nav-links">
+                <a href="/public/index.html">Home</a>
+                <a href="/public/about.html">About</a>
+                <a id= "selected" href="/public/work.html">Work</a>
+            </div>
+            <a id="contact" href="mailto:someone@example.com">Contact</a>
+        </nav>
+        <main class="works max-w-[1200px] text-center mx-auto mt-20 mb-0 px-5 py-12.5">
+            <h1 class="text-white text-4xl mb-7.5 animate-fade-in">My Work</h1>
+            <div class="work-gallery">
+                <div class="work-item md:row-span-2">
+                    <a href="https://example.com/project1" target="_blank" class="block h-full">
+                        <div class="work-image h-full">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ718nztPNJfCbDJjZG8fOkejBnBAeQw5eAUA&s" alt="Project 1">
+                            <div class="hover-overlay">
+                                <i class="bx bx-right-arrow-alt"></i>
+                            </div>
+                        </div>
+                    </a>
+                    <p class="mt-4">peecok</p>
+                </div>
+                <div class="work-item">
+                    <a href="https://example.com/project2" target="_blank" class="block">
+                        <div class="work-image">
+                            <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg" alt="Project 2">
+                            <div class="hover-overlay">
+                                <i class="bx bx-right-arrow-alt"></i>
+                            </div>
+                        </div>
+                    </a>
+                    <p class="mt-4">tree</p>
+                </div>
+                <div class="work-item">
+                    <a href="https://example.com/project3" target="_blank" class="block">
+                        <div class="work-image">
+                            <img src="https://letsenhance.io/static/73136da51c245e80edc6ccfe44888a99/1015f/MainBefore.jpg" alt="Project 3">
+                            <div class="hover-overlay">
+                                <i class="bx bx-right-arrow-alt"></i>
+                            </div>
+                        </div>
+                    </a>
+                    <p class="mt-4">reptile</p>
+                </div>
+            </div>
+            <div class="work-item mt-8">
+                <a href="https://example.com/project4" target="_blank">
+                    <div class="work-image">
+                        <img src="https://images.pexels.com/photos/3680219/pexels-photo-3680219.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Project 4">
+                        <div class="hover-overlay">
+                            <i class="bx bx-right-arrow-alt"></i>
+                        </div>
+                    </div>
+                </a>
+                <p>cringe</p>
+            </div>
+        </main>
+    </body>
+</html>
