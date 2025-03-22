@@ -1,7 +1,8 @@
 {
   "dependencies": {
     "@tailwindcss/cli": "^4.0.14",
-    "tailwindcss": "^4.0.14"
+    "tailwindcss": "^4.0.14",
+    "tailwindcss-animated": "^2.0.0"
   },
   "name": "personal-portfolio",
   "version": "1.0.0",
