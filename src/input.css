@@ -91,7 +91,7 @@ html {
 }
 
 body {
-    @apply min-h-screen flex flex-col items-center justify-center bg-(--color-background) text-white font-sans;
+    @apply min-h-screen flex flex-col items-center justify-center overflow-x-clip bg-(--color-background) text-white font-sans p-4;
 }
 
 section {
@@ -156,6 +156,7 @@ h2, h3 {
 .word:nth-child(1) { animation-delay: 1s; }
 .word:nth-child(2) { animation-delay: 1.15s; }
 .word:nth-child(3) { animation-delay: 1.3s; }
+.word:nth-child(4) { animation-delay: 1.45s; }
 
 /* ===== SOCIAL ICONS ===== */
 .social-icons {

@@ -280,8 +280,8 @@
   .text-\[1rem\] {
     font-size: 1rem;
   }
-  .text-\[clamp\(3\.75rem\,4\.1786rem_\+_-0\.8929vw\,4rem\)\] {
-    font-size: clamp(3.75rem, 4.1786rem + -0.8929vw, 4rem);
+  .text-\[clamp\(3\.75rem\,3\.9286rem\+-0\.8929vw\,3\.5rem\)\] {
+    font-size: clamp(3.75rem, 3.9286rem + -0.8929vw, 3.5rem);
   }
   .leading-none {
     --tw-leading: 1;
@@ -310,14 +310,6 @@
   .\*\:opacity-0 {
     :is(& > *) {
       opacity: 0%;
-    }
-  }
-  .not-hover\:animate-pause {
-    &:not(*:hover) {
-      animation-play-state: paused;
-    }
-    @media not (hover: hover) {
-      animation-play-state: paused;
     }
   }
   .hover\:animate-spin {
@@ -389,7 +381,9 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow-x: clip;
   background-color: var(--color-background);
+  padding: calc(var(--spacing) * 4);
   font-family: var(--font-sans);
   color: var(--color-white);
 }
@@ -641,6 +635,9 @@ h2, h3 {
 }
 .word:nth-child(3) {
   animation-delay: 1.3s;
+}
+.word:nth-child(4) {
+  animation-delay: 1.45s;
 }
 .social-icons {
   margin-top: calc(var(--spacing) * 5);
