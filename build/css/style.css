@@ -312,6 +312,14 @@
       opacity: 0%;
     }
   }
+  .not-hover\:animate-pause {
+    &:not(*:hover) {
+      animation-play-state: paused;
+    }
+    @media not (hover: hover) {
+      animation-play-state: paused;
+    }
+  }
   .hover\:animate-spin {
     &:hover {
       @media (hover: hover) {
