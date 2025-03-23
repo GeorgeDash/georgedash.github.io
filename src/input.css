@@ -30,6 +30,7 @@
     font-style: normal;
 }
 
+
 /* ===== THEME VARIABLES ===== */
 @theme{
     /* Typography */
@@ -44,6 +45,9 @@
     --color-menu: #3f3f3f63;
     --color-light: #f5f5f5; 
     --color-dark: #333;
+    --color-youtube: #ff0000;
+    --color-instagram: #e1306c;
+    --color-github: #7c72ff;
 
     /* Breakpoints */
     --breakpoint-sm: 320px;
@@ -91,7 +95,12 @@ html {
 }
 
 body {
-    @apply min-h-screen flex flex-col items-center justify-center overflow-x-clip bg-(--color-background) text-white font-sans p-4;
+    @apply min-h-dvh flex flex-col items-center justify-center overflow-x-clip bg-(--color-background) text-white font-sans p-4 relative;
+}
+
+/* Selection color */
+::selection {
+    @apply bg-gray-500;
 }
 
 section {
@@ -104,6 +113,14 @@ p {
 
 h2, h3 {
     @apply text-white text-3xl;
+}
+
+footer{
+    @apply w-full flex flex-col justify-center items-center text-center absolute bottom-5;
+}
+
+footer p{
+    @apply text-gray-400 text-[0.875rem] font-bold;
 }
 
 /* ===== NAVIGATION ===== */
@@ -132,7 +149,7 @@ h2, h3 {
 
 /* Hamburger Menu */
 .hamburger {
-    @apply hidden cursor-pointer text-2xl max-md:block max-md:backdrop-blur-md max-md:bg-(--color-nav) max-md:rounded-[100px] max-md:p-[5px] max-md:w-[50px] max-md:aspect-square max-md:items-center max-md:content-center max-md:text-white max-md:transition-all max-md:duration-300 max-md:hover:bg-(--color-hover) max-md:hover:scale-110;
+    @apply hidden cursor-pointer text-2xl max-md:block max-md:backdrop-blur-md max-md:bg-(--color-nav) max-md:rounded-[100px] max-md:p-1.25 max-md:w-12.5 max-md:aspect-square max-md:items-center max-md:content-center max-md:text-white max-md:transition-all max-md:duration-300 max-md:hover:bg-(--color-hover) max-md:hover:scale-110;
 }
 
 .menu-toggle {
@@ -160,11 +177,23 @@ h2, h3 {
 
 /* ===== SOCIAL ICONS ===== */
 .social-icons {
-    @apply flex gap-5 mt-5 transition-all duration-375 animate-fade-in;
+    @apply flex gap-5 max-md:gap-8 mt-5 transition-all duration-375 animate-fade-in;
 }
 
 .social-icons a {
-    @apply w-16 flex justify-center items-center text-3xl text-white aspect-square rounded-none shadow-md transition-all duration-500 hover:text-(--color-dark) hover:bg-transparent origin-center p-2 relative overflow-hidden before:content-[''] before:absolute before:inset-0 before:bg-(--color-light) before:scale-0 before:transition-all before:duration-500 before:opacity-0 hover:before:opacity-100 hover:before:scale-100 hover:before:rounded-full before:origin-center before:rounded-none before:-z-10;
+    @apply w-16 max-md:w-14 flex justify-center items-center text-3xl max-md:text-[1.75rem] text-white aspect-square max-md:border max-md:rounded-full transition-all duration-500 hover:text-(--color-dark) hover:bg-transparent origin-center p-2 relative overflow-hidden before:content-[''] before:absolute before:inset-0 before:bg-(--color-light) before:scale-0 before:transition-all before:duration-500 before:opacity-0 hover:before:opacity-100 hover:before:scale-100 hover:before:rounded-full before:origin-center before:-z-10;
+}
+
+#youtube {
+    @apply hover:text-(--color-youtube);
+}
+
+#instagram {
+    @apply hover:text-(--color-instagram);
+}
+
+#github {
+    @apply hover:text-(--color-github);
 }
 
 /* ===== ABOUT SECTION ===== */
