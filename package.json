@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "@tailwindcss/cli": "^4.0.14",
+    "tailwind-clamp": "^4.0.6",
     "tailwindcss": "^4.0.14",
     "tailwindcss-animated": "^2.0.0"
   },

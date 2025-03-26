@@ -206,6 +206,9 @@
   .mt-4 {
     margin-top: calc(var(--spacing) * 4);
   }
+  .mt-5 {
+    margin-top: calc(var(--spacing) * 5);
+  }
   .mt-8 {
     margin-top: calc(var(--spacing) * 8);
   }
@@ -223,6 +226,12 @@
   }
   .mb-0 {
     margin-bottom: calc(var(--spacing) * 0);
+  }
+  .mb-2 {
+    margin-bottom: calc(var(--spacing) * 2);
+  }
+  .mb-2\.5 {
+    margin-bottom: calc(var(--spacing) * 2.5);
   }
   .mb-7 {
     margin-bottom: calc(var(--spacing) * 7);
@@ -281,6 +290,9 @@
   .justify-center {
     justify-content: center;
   }
+  .gap-5 {
+    gap: calc(var(--spacing) * 5);
+  }
   .gap-20 {
     gap: calc(var(--spacing) * 20);
   }
@@ -297,11 +309,29 @@
   .px-5 {
     padding-inline: calc(var(--spacing) * 5);
   }
+  .py-2 {
+    padding-block: calc(var(--spacing) * 2);
+  }
+  .py-2\.5 {
+    padding-block: calc(var(--spacing) * 2.5);
+  }
   .py-12 {
     padding-block: calc(var(--spacing) * 12);
   }
   .py-12\.5 {
     padding-block: calc(var(--spacing) * 12.5);
+  }
+  .pt-2 {
+    padding-top: calc(var(--spacing) * 2);
+  }
+  .pt-2\.5 {
+    padding-top: calc(var(--spacing) * 2.5);
+  }
+  .pb-2 {
+    padding-bottom: calc(var(--spacing) * 2);
+  }
+  .pb-2\.5 {
+    padding-bottom: calc(var(--spacing) * 2.5);
   }
   .text-center {
     text-align: center;
@@ -310,11 +340,18 @@
     font-size: var(--text-4xl);
     line-height: var(--tw-leading, var(--text-4xl--line-height));
   }
+  .clamp-\[text\,60px\,56px\,320px\,768px\] {
+    font-size: calc(clamp(-60px, -62.857143px + 0.892857vw, -56px) * -1);
+  }
+  .clamp-\[text\,60px\,56px\] {
+    font-size: calc(clamp(-60px, -61.142857px + 0.357143vw, -56px) * -1);
+  }
   .text-\[1rem\] {
     font-size: 1rem;
   }
-  .text-\[clamp\(3\.75rem\,3\.9286rem\+-0\.8929vw\,3\.5rem\)\] {
-    font-size: clamp(3.75rem, 3.9286rem + -0.8929vw, 3.5rem);
+  .leading-loose {
+    --tw-leading: var(--leading-loose);
+    line-height: var(--leading-loose);
   }
   .leading-none {
     --tw-leading: 1;
@@ -343,6 +380,15 @@
   .backdrop-filter {
     -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
     backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+  }
+  .transition-all {
+    transition-property: all;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+  .duration-375 {
+    --tw-duration: 375ms;
+    transition-duration: 375ms;
   }
   .\*\:inline-block {
     :is(& > *) {
@@ -376,9 +422,20 @@
       flex-direction: column;
     }
   }
-  .max-md\:pb-10 {
+  .max-md\:gap-8 {
     @media (width < 768px) {
-      padding-bottom: calc(var(--spacing) * 10);
+      gap: calc(var(--spacing) * 8);
+    }
+  }
+  .max-md\:py-2\.5 {
+    @media (width < 768px) {
+      padding-block: calc(var(--spacing) * 2.5);
+    }
+  }
+  .max-md\:leading-loose {
+    @media (width < 768px) {
+      --tw-leading: var(--leading-loose);
+      line-height: var(--leading-loose);
     }
   }
   .md\:row-span-2 {
@@ -705,20 +762,6 @@ footer p {
 }
 .word:nth-child(4) {
   animation-delay: 1.45s;
-}
-.social-icons {
-  margin-top: calc(var(--spacing) * 5);
-  display: flex;
-  animation: var(--animate-fade-in);
-  gap: calc(var(--spacing) * 5);
-  transition-property: all;
-  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
-  transition-duration: var(--tw-duration, var(--default-transition-duration));
-  --tw-duration: 375ms;
-  transition-duration: 375ms;
-  @media (width < 768px) {
-    gap: calc(var(--spacing) * 8);
-  }
 }
 .social-icons a {
   position: relative;
@@ -1073,6 +1116,10 @@ footer p {
   syntax: "*";
   inherits: false;
 }
+@property --tw-duration {
+  syntax: "*";
+  inherits: false;
+}
 @property --tw-translate-x {
   syntax: "*";
   inherits: false;
@@ -1092,10 +1139,6 @@ footer p {
   syntax: "*";
   inherits: false;
   initial-value: 0;
-}
-@property --tw-duration {
-  syntax: "*";
-  inherits: false;
 }
 @property --tw-scale-x {
   syntax: "*";
