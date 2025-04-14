@@ -241,10 +241,14 @@ footer p{
 @media (max-width: 768px) {
     .menu-toggle:checked ~ .nav-links {
         /* Visual/Animation */
-        @apply z-100 max-w-[150px] flex backdrop-blur-md bg-(--color-menu) rounded-[25px] shadow-md animate-fade-in -right-10 left-auto;
+        @apply [pointer-events:all] z-100 max-w-[150px] flex backdrop-blur-md bg-(--color-menu) rounded-[25px] shadow-md opacity-100 blur-none transform-none animate-fade-in -right-10 left-auto;
     }
 
     .about-content {
         @apply flex-col m-2.5;
+    }
+
+    .menu-toggle:checked ~ main {
+      @apply blur-xs transition-all duration-300;
     }
 }
