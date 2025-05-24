@@ -252,3 +252,14 @@ footer p{
       @apply blur-xs transition-all duration-300;
     }
 }
+
+/* Status indicator */
+.status-indicator{
+    @apply z-2 size-3.5 rounded-full border-1 border-(--color-background) absolute top-3/4 right-0.5;
+}
+
+.status-online { background-color: #3BA55D; }
+.status-idle { background-color: #FAA61A; }
+.status-dnd { background-color: #ED4245; }
+.status-offline { background-color: #747F8D; }
+.status-unknown { background-color: #747F8D; opacity: 0.6; }
